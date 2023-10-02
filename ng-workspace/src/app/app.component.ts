@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import { ThreeService } from './three.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor() {
-    console.log(THREE);
+  constructor(public three: ThreeService) {
+    this.three.main();
   }
 }
